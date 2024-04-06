@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/personal-management-bff/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/personal-management-bff/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/personal-management-bff",
+  "projects": {
+    "personal-management-bff": {
+      "type": "application",
+      "root": "apps/personal-management-bff",
+      "entryFile": "main",
+      "sourceRoot": "apps/personal-management-bff/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/personal-management-bff/tsconfig.app.json"
+      }
+    },
+    "personal-management-core": {
+      "type": "application",
+      "root": "apps/personal-management-core",
+      "entryFile": "main",
+      "sourceRoot": "apps/personal-management-core/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/personal-management-core/tsconfig.app.json"
+      }
+    },
+    "customer-core": {
+      "type": "application",
+      "root": "apps/customer-core",
+      "entryFile": "main",
+      "sourceRoot": "apps/customer-core/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/customer-core/tsconfig.app.json"
+      }
+    }
+  }
+}
